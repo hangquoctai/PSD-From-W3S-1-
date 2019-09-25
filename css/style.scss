@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.clear,
+.clear:after,
+.clear:before {
+  content: "";
+  display: table;
+  clear: both;
+}
+.btn {
+  background-color: #000;
+  color: #fff;
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+ul {
+  margin: 0;
+  padding:0;
+  list-style: none;
+}
+.container {
+  width: 60%;
+  margin: auto;
+  @media (max-width: 768px) {
+    width: 75%;
+    margin: auto;
+  }
+  @media (max-width: 500px) {
+    width: 90%;
+    margin: auto;
+  }
+}
+.header {
+  background: url("../img/chicago.jpg") center center;
+  background-size: cover;
+  height: 100vh;
+  .header-content {
+    background-color: #000;
+    height:50px;
+    line-height: 50px;
+    .header-menu {
+      @media (max-width: 500px) {
+        display: none;
+        position: absolute;
+        top:50px;
+        right: 0;
+        ul{
+          margin: 0 auto;
+          width: 95%;
+          &::before{
+            float: right;
+            clear: right;
+            content: '';
+            border-right: 15px solid transparent;
+            border-left: 15px solid transparent;
+            border-bottom:15px solid rgb(138, 219, 233);;
+          }
+          li{
+            border-bottom: 1px solid #d2d2d2;
+            background-color: #f2f2f2;
+            float: none;
+            width: 100%;
+            text-align: center;
+            &:first-child{
+              border-top: 5px solid rgb(138, 219, 233);
+            }
+            a{
+              color: #000!important;
+            }
+          }
+        }
+      }
+      ul {
+        display: block;
+        li {
+          cursor: pointer;
+          float: left;
+          &:hover {
+            background-color: rgb(138, 219, 233);
+          }
+          &:hover a{
+            color: red!important;
+          }
+          a {
+            margin: 0px 20px;
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .header-search {
+      margin:0px 30px;
+      @media (max-width: 768px) {
+        display: none;
+      }
+      color: #fff;
+      float: right;
+    }
+  }
+}
+.band {
+  margin: 100px 0px;
+  .band-content {
+    text-align: center;
+    h6 {
+      margin: 20px 0px;
+    }
+    p {
+      text-align: justify;
+    }
+  }
+  .band-member {
+    margin: 50px 0px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+.tour {
+  margin: 20px 0px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0px;
+  .tour-content {
+    h5 {
+      margin: 20px 0px;
+      color: #d2d2d2;
+    }
+  }
+  .tour-dates {
+    p {
+      border-bottom: 1px solid #e2e2e2;
+      background-color: #fff;
+      color: #000;
+      text-align: left;
+      padding: 10px;
+    }
+    .sold {
+      background-color: red;
+      padding: 5px 10px;
+      color: #fff;
+      margin-left: 20px;
+    }
+    .sold-3 {
+      float: right;
+      background-color: #000;
+      padding: 5px 10px;
+      color: #fff;
+      border-radius: 999px;
+      &::after {
+        clear: right;
+      }
+    }
+  }
+  .tour-list {
+    margin: 50px 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .tour-list-item {
+      width: 30%;
+      margin: 10px;
+      @media (max-width: 768px) {
+        width: 45%;
+      }
+      @media (max-width: 500px) {
+        width: 100%;
+      }
+      overflow: hidden;
+      background-color: #fff;
+      color: #000;
+      text-align: left;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      h3 {
+        margin: 10px;
+      }
+      span {
+        color: gray;
+        margin: 10px;
+      }
+      p {
+        margin: 10px;
+      }
+    }
+  }
+}
+.contact {
+  margin: 50px 0px;
+  .contact-content {
+    text-align: center;
+    h5 {
+      color: gray;
+    }
+  }
+  .contact-send {
+    margin: 50px 0px;
+    .contact-send-address {
+      width: 35%;
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+      float: left;
+      p {
+        padding: 5px 0px;
+      }
+      i {
+        padding-right: 10px;
+      }
+    }
+    .contact-send-input {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 60%;
+      @media (max-width: 768px) {
+        padding: 30px 0px;
+        width: 100%;
+      }
+      float: right;
+      input {
+        padding: 10px;
+        margin: 5px;
+        width: 45%;
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+      }
+      input[type="message"] {
+        width: 100%;
+      }
+    }
+    .btn {
+      float: right;
+      clear: both;
+      margin-bottom: 100px;
+    }
+  }
+}
+.map {
+  padding-top: 100px;
+  background: url("../img/map.jpg") no-repeat center center;
+  background-size: cover;
+  height: 105vh;
+}
+.footer {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 100px 0px;
+  .footer-content {
+    i {
+      cursor: pointer;
+      padding: 0px 10px;
+    }
+  }
+  h5 {
+    color: gray;
+    margin: 20px 0px;
+    u {
+      cursor: pointer;
+    }
+  }
+}
+
+.hambur {
+  position: relative;
+  margin: 0px 10px;
+  line-height: 50px; 
+  display: none;
+  float: right;
+  cursor: pointer;
+  @media (max-width: 500px) {
+    display: block;
+  }
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+}
